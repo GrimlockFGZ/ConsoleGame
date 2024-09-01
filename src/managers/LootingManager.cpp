@@ -1,0 +1,1 @@
+//Handles Looting mechanics
