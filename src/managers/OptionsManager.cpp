@@ -3,7 +3,7 @@
 #include "../../header/includes.h"
 
 void OptionsManager::DrawSettings() {
-    std::cout<<"/r";
+    std::cout<<"\r";
 }
 
 void OptionsManager::HandleSettingsInput() {

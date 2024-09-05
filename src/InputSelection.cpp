@@ -2,31 +2,19 @@
 #include "../header/terminal.h"
 #include "../header/OptionsManager.h"
 #include "../header/CombatManager.h"
+#include "../header/ExplorationManager.h"
+#include "../header/LootingManager.h"
 
+InputSelection::InputSelection() = default;
 
-bool exploring;
-bool stealing;
-
-void InputSelection::ExplorationLoop() { std::cout << "Exploring"; }
-
-void InputSelection::StealingLoop() {
-    std::cout << "Stealing things";
-    //todo: implement this LootingManager::StealingLoop();
-}
-
-void InputSelection::HandleInputSelection(const int command) {
+// ReSharper disable once CppMemberFunctionMayBeStatic
+void InputSelection::HandleInputSelection(int command) {
     switch(command) {
-        default:return;
-        case 1:ExplorationLoop();
-            break;
-        case 2:CombatManager::CombatLoop();
-            break;
-        case 3:StealingLoop();
-            break;
-        case 4:Terminal::drawOptions();
-            break;
-        case 5:OptionsManager::DrawSettings();
-            break;
-        case 6:;
+        default: return;
+        case 1: ExplorationManager().Explore(); break;
+        case 2: CombatManager().CombatLoop(); break;
+        case 3: LootingManager().Stealing(); break;
+        case 4: Terminal().drawOptions(); break;
+        case 5: OptionsManager().DrawSettings(); break;
     }
 }

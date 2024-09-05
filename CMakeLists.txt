@@ -1,23 +1,19 @@
-cmake_minimum_required(VERSION 3.28)
+cmake_minimum_required(VERSION 3.10)
 project(untitled2)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -static-libgcc -static-libstdc++")
 
-add_executable(untitled2)
-
-target_sources(untitled2 PRIVATE
-        src/terminal.cpp
-        src/InputSelection.cpp
-        src/managers/OptionsManager.cpp
-        src/managers/CombatManager.cpp
-        src/managers/LootingManager.cpp
-        src/Player.cpp
+# Add all source files
+file(GLOB_RECURSE SOURCE_FILES
+        "src/*.cpp"
+        "src/**/*.cpp"
+        "header/*.h"
+        "header/**/*.h"
 )
 
-target_include_directories(untitled2 PRIVATE
-        ${CMAKE_CURRENT_SOURCE_DIR}/header
-)
+add_executable(untitled2 ${SOURCE_FILES})
 
-target_link_libraries(untitled2 PRIVATE
-)
+# Explicitly add all header files
+target_include_directories(untitled2 PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/header)
