@@ -1,5 +1,8 @@
 #pragma once
 class CombatManager {
 	public:
-		static void CombatLoop();
+	CombatManager();
+
+		bool inCombat;
+		 void CombatLoop();
 };
