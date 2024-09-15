@@ -1,4 +1,4 @@
-#include "../../header/ExplorationManager.h"
+#include "../header/ManagerHeaders/ExplorationManager.h"
 
 ExplorationManager::ExplorationManager() : directions({Direction::north, Direction::east, Direction::south, Direction::west}), isExploring(true) {}
 

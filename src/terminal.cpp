@@ -1,5 +1,5 @@
 #include "../header/terminal.h"
-#include "../header/ExplorationManager.h"
+#include "../header/ManagerHeaders/ExplorationManager.h"
 #include "../header/InputSelection.h"
 
 constexpr int MAX_OPTIONS = 6;

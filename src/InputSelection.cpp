@@ -1,14 +1,14 @@
 #include "../header/inputselection.h"
 #include "../header/terminal.h"
-#include "../header/OptionsManager.h"
-#include "../header/CombatManager.h"
-#include "../header/ExplorationManager.h"
-#include "../header/LootingManager.h"
+#include "../header/ManagerHeaders/OptionsManager.h"
+#include "../header/ManagerHeaders/CombatManager.h"
+#include "../header/ManagerHeaders/ExplorationManager.h"
+#include "../header/ManagerHeaders/LootingManager.h"
 
 InputSelection::InputSelection() = default;
 
 // ReSharper disable once CppMemberFunctionMayBeStatic
-void InputSelection::HandleInputSelection(int command) {
+void InputSelection::HandleInputSelection(const int command) {
     switch(command) {
         default: return;
         case 1: ExplorationManager().Explore(); break;

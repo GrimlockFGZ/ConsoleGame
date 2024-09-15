@@ -1,9 +1,9 @@
 //Handles Looting mechanics
-#include "../../header/LootingManager.h"
+#include "../header/ManagerHeaders/LootingManager.h"
 
-LootingManager::LootingManager() {
-
-}
+LootingManager::LootingManager() = default;
 void LootingManager::Stealing() {
+
+
 
 }

@@ -1,6 +1,6 @@
-#include "../../header/includes.h"
-#include "../../header/Player.h"
-#include "../../header/CombatManager.h"
+#include "../header/includes.h"
+#include "../header/Player.h"
+#include "../header/ManagerHeaders/CombatManager.h"
 
 CombatManager::CombatManager() : inCombat(false) {}
 
