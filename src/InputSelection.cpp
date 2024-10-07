@@ -7,7 +7,6 @@
 
 InputSelection::InputSelection() = default;
 
-// ReSharper disable once CppMemberFunctionMayBeStatic
 void InputSelection::HandleInputSelection(const int command) {
     switch(command) {
         default: return;

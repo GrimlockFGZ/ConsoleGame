@@ -2,6 +2,6 @@
 
 class InputSelection{
 public:
-     void HandleInputSelection(int command);
+      void HandleInputSelection(int command);
      InputSelection();
 };

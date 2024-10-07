@@ -2,7 +2,7 @@
 #include "../header/Player.h"
 #include "../header/ManagerHeaders/CombatManager.h"
 
-CombatManager::CombatManager() : inCombat(false) {}
+CombatManager::CombatManager() : inCombat(false){}
 
 void CombatManager::CombatLoop() {
 	inCombat = true;
